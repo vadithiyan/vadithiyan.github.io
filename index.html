@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Blog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <div class="noise"></div>
+
+  <header class="site-header">
+    <nav class="nav">
+      <a href="index.html" class="nav-logo">mb.</a>
+      <div class="nav-links">
+        <a href="index.html" class="active">Writing</a>
+        <a href="about.html">About</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-label">Personal blog</div>
+      <h1 class="hero-title">Thoughts on<br /><em>design, code</em><br />& everything else.</h1>
+      <div class="hero-line"></div>
+    </section>
+
+    <section class="posts-section">
+      <div class="posts-header">
+        <span class="posts-count" id="posts-count">— 3 essays</span>
+        <div class="filter-tags">
+          <button class="tag active" data-tag="all">All</button>
+          <button class="tag" data-tag="design">Design</button>
+          <button class="tag" data-tag="code">Code</button>
+          <button class="tag" data-tag="life">Life</button>
+        </div>
+      </div>
+
+      <div class="posts-list" id="posts-list">
+        <!-- Posts injected by JS -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>© 2026 My Blog</span>
+    <div class="footer-links">
+      <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+      <a href="mailto:you@email.com">Email</a>
+    </div>
+  </footer>
+
+  <script src="assets/js/posts.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
