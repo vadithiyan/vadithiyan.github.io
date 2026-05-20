@@ -3,11 +3,85 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About — The Blog</title>
+  <title>About — Varun Adithiyan</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    .timeline { margin: 3rem 0; }
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 1.5rem;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid var(--border);
+      animation: fadeUp 0.5s ease both;
+    }
+    .timeline-item:first-child { border-top: 1px solid var(--border); }
+    .timeline-period {
+      font-size: 0.75rem;
+      color: var(--ink-muted);
+      padding-top: 0.2rem;
+      line-height: 1.5;
+    }
+    .timeline-role {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.2rem;
+    }
+    .timeline-company {
+      font-size: 0.82rem;
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+    .timeline-desc {
+      font-size: 0.88rem;
+      color: var(--ink-muted);
+      line-height: 1.65;
+    }
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 1.5rem 0;
+    }
+    .skill-pill {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 0.35rem 0.85rem;
+      border-radius: 100px;
+      font-size: 0.8rem;
+      color: var(--ink-muted);
+    }
+    .about-section-title {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      letter-spacing: -0.015em;
+      margin: 3rem 0 0.5rem;
+      color: var(--ink);
+    }
+    .project-list { margin: 1rem 0; list-style: none; padding: 0; }
+    .project-list li {
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 1rem;
+      font-size: 0.9rem;
+    }
+    .project-list li:first-child { border-top: 1px solid var(--border); }
+    .project-name { font-weight: 400; color: var(--ink); }
+    .project-platform { font-size: 0.75rem; color: var(--ink-muted); }
+    .project-link { font-size: 0.78rem; color: var(--accent); }
+    .project-link:hover { text-decoration: underline; }
+    @media (max-width: 600px) {
+      .timeline-item { grid-template-columns: 1fr; gap: 0.4rem; }
+    }
+  </style>
 </head>
 <body>
 
@@ -15,7 +89,7 @@
 
   <header class="site-header">
     <nav class="nav">
-      <a href="index.html" class="nav-logo">mb.</a>
+      <a href="index.html" class="nav-logo">var.</a>
       <div class="nav-links">
         <a href="index.html">Writing</a>
         <a href="about.html" class="active">About</a>
@@ -29,35 +103,137 @@
         <div class="about-left">
           <div class="about-avatar">
             <div class="avatar-placeholder">
-              <span>You</span>
+              <span>VA</span>
             </div>
           </div>
         </div>
         <div class="about-right">
           <p class="about-label">About me</p>
-          <h1 class="about-title">Hi, I'm <em>Your Name</em>.</h1>
+          <h1 class="about-title">Hi, I'm <em>Varun</em>.</h1>
           <div class="about-body">
-            <p>I'm a [designer / developer / writer / human] based in [City]. I write about the things that interest me: how things are made, why they work, and what they mean.</p>
-            <p>This blog is my thinking-out-loud place. No newsletter, no algorithm — just writing when I have something worth saying.</p>
-            <p>Currently working on <strong>[what you're working on]</strong>. Previously at <strong>[where you've been]</strong>.</p>
+            <p>I'm a game engineer and technical lead with 9+ years of experience shipping games and interactive experiences across PC, console, mobile, and XR. Based in London, currently building an indie studio and finishing an MSc in AI at Queen Mary.</p>
+            <p>I care about the systems underneath the screen — gameplay architecture, AI behaviours, the tools that let creators move fast. This blog is where I think out loud about that stuff, and anything else worth writing down.</p>
+            <p>Currently: <strong>Founding Engineer at Foxshower Studios</strong>, building a management sim for PC and Nintendo Switch.</p>
           </div>
           <div class="about-links">
-            <a href="mailto:you@email.com" class="about-link">Email me →</a>
-            <a href="https://github.com/yourusername" target="_blank" class="about-link">GitHub →</a>
+            <a href="mailto:vadithiyan@gmail.com" class="about-link">Email me →</a>
           </div>
         </div>
+      </div>
+
+      <!-- SKILLS -->
+      <div style="max-width: 680px; margin: 0 auto; padding-top: 1rem;">
+        <h2 class="about-section-title">Skills & tools</h2>
+        <div class="skills-grid">
+          <span class="skill-pill">Unity</span>
+          <span class="skill-pill">Unreal Engine 5</span>
+          <span class="skill-pill">C#</span>
+          <span class="skill-pill">C++</span>
+          <span class="skill-pill">Python</span>
+          <span class="skill-pill">Game AI</span>
+          <span class="skill-pill">XR / Meta Quest</span>
+          <span class="skill-pill">HoloLens</span>
+          <span class="skill-pill">Machine Learning</span>
+          <span class="skill-pill">Procedural Generation</span>
+          <span class="skill-pill">Technical Leadership</span>
+          <span class="skill-pill">Game Design</span>
+        </div>
+
+        <!-- EXPERIENCE TIMELINE -->
+        <h2 class="about-section-title">Experience</h2>
+        <div class="timeline">
+
+          <div class="timeline-item">
+            <div class="timeline-period">Sep 2025 – Present</div>
+            <div>
+              <div class="timeline-role">Founding Engineer</div>
+              <div class="timeline-company">Foxshower Studios</div>
+              <div class="timeline-desc">Leading design and development of an original management simulation game for PC and Nintendo Switch. Running production across a team of three artists, from concept through vertical slice.</div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-period">Sep 2024 – Sep 2025</div>
+            <div>
+              <div class="timeline-role">MSc Artificial Intelligence</div>
+              <div class="timeline-company">Queen Mary University of London</div>
+              <div class="timeline-desc">AI in Games, Deep Learning, Computational Creativity, Interactive Agents & Procedural Generation, Machine Learning, Applied Statistics.</div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-period">Dec 2022 – Aug 2024</div>
+            <div>
+              <div class="timeline-role">Technical Lead / Game AI Programmer</div>
+              <div class="timeline-company">Weloadin</div>
+              <div class="timeline-desc">Led a team of seven engineers. Architected core systems for <em>Bloody Boots</em>, a PS5/PC title built in UE5 — accepted into Sony's India Hero Project. Designed NPC AI, pathfinding, and combat architecture.</div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-period">Jun 2018 – Nov 2022</div>
+            <div>
+              <div class="timeline-role">Senior Unity Engineer</div>
+              <div class="timeline-company">Appearition</div>
+              <div class="timeline-desc">Built immersive EdTech products for Australian universities on HoloLens, Meta Quest, GearVR, and Epson Moverio. Integrated Unity and Unreal applications with an in-house CMS via REST APIs.</div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-period">Sep 2016 – Jun 2018</div>
+            <div>
+              <div class="timeline-role">Unity Engineer</div>
+              <div class="timeline-company">Nextwave Multimedia</div>
+              <div class="timeline-desc">Built internal tools in C++ and Python that sped up asset import by 75%. Developed an ML-based AI using genetic algorithms. Shipped gameplay for WCC2, WCC3, and a table tennis title.</div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-period">Feb 2016 – Aug 2016</div>
+            <div>
+              <div class="timeline-role">Junior Unity Developer</div>
+              <div class="timeline-company">Qneuro India</div>
+              <div class="timeline-desc">EEG device integrations and real-time data visualisations for medical gaming. Led a team of four to unify multiple puzzle game systems into one platform.</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- PROJECTS -->
+        <h2 class="about-section-title">Shipped projects</h2>
+        <ul class="project-list">
+          <li>
+            <span class="project-name">World Cricket Championship 3</span>
+            <span class="project-platform">iOS · Android</span>
+            <a class="project-link" href="https://play.google.com/store/apps/details?id=com.nextwave.wcc3" target="_blank">Play Store →</a>
+          </li>
+          <li>
+            <span class="project-name">Bloody Boots</span>
+            <span class="project-platform">PC · PlayStation (Sony Hero Project)</span>
+            <a class="project-link" href="https://www.bloodyboots.game/" target="_blank">Website →</a>
+          </li>
+          <li>
+            <span class="project-name">Planet Golf</span>
+            <span class="project-platform">iOS · Android</span>
+            <a class="project-link" href="https://www.youtube.com/watch?v=3jtar2fa_TI" target="_blank">Watch →</a>
+          </li>
+          <li>
+            <span class="project-name">World Table Tennis Champs</span>
+            <span class="project-platform">iOS · Android</span>
+            <a class="project-link" href="https://www.youtube.com/watch?v=2P_TjALVZAg" target="_blank">Watch →</a>
+          </li>
+        </ul>
+
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <span>© 2026 My Blog</span>
+    <span>© 2026 Varun Adithiyan Ravichandran</span>
     <div class="footer-links">
-      <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-      <a href="mailto:you@email.com">Email</a>
+      <a href="mailto:vadithiyan@gmail.com">Email</a>
     </div>
   </footer>
 
-  <script src="assets/js/posts.js"></script>
 </body>
 </html>
