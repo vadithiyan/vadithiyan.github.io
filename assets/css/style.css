@@ -4,17 +4,17 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg:        #111110;
-  --ink:       #E8E4DC;
-  --ink-muted: #6B6760;
-  --accent:    #E86A47;
-  --accent-2:  #5B9BD5;
-  --surface:   #1C1C1A;
-  --border:    #2A2925;
-  --font-display: 'DM Serif Display', Georgia, serif;
-  --font-body:    'DM Sans', system-ui, sans-serif;
-  --max-w: 780px;
-  --max-w-wide: 1100px;
+    --bg: #0C0C0C;
+    --ink: #E0E0E0;
+    --ink-muted: #666666;
+    --accent: #00C2B2;
+    --accent-2: #8B5CF6;
+    --surface: #161616;
+    --border: #242424;
+    --font-display: 'DM Serif Display', Georgia, serif;
+    --font-body: 'DM Sans', system-ui, sans-serif;
+    --max-w: 780px;
+    --max-w-wide: 1100px;
 }
 
 html { font-size: 16px; scroll-behavior: smooth; }
@@ -53,7 +53,7 @@ a { color: inherit; text-decoration: none; }
     position: sticky;
     top: 0;
     z-index: 50;
-    background: rgba(17, 17, 16, 0.88);
+    background: rgba(12, 12, 12, 0.88);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border);
